@@ -8,25 +8,20 @@ public class Main {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         StringBuilder sb = new StringBuilder();
 
-        String init = br.readLine();
-        StringTokenizer st = new StringTokenizer(init);
+        StringTokenizer st = new StringTokenizer(br.readLine());
 
         int N = Integer.parseInt(st.nextToken());
-        int[] arr = new int[N];
         int rep = Integer.parseInt(st.nextToken());
+        int[] arr = new int[N];
 
-        String input = br.readLine();
-        st = new StringTokenizer(input);
-
+        st = new StringTokenizer(br.readLine());
         arr[0] = Integer.parseInt(st.nextToken());
         for (int i = 1; i < N; i++) {
             arr[i] = arr[i - 1] + Integer.parseInt(st.nextToken());
         }
 
         for (int i = 0; i < rep; i++) {
-            String range = br.readLine();
-            st = new StringTokenizer(range);
-
+            st = new StringTokenizer(br.readLine());
             int ran1 = Integer.parseInt(st.nextToken()) - 2;
             int ran2 = Integer.parseInt(st.nextToken()) - 1;
 
